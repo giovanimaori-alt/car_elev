@@ -72,8 +72,8 @@ header h1 {
   color: #333333;
   transition: 0.25s ease;
 
-  /* 🔥 MODIFICATION DEMANDÉE : hauteur réduite (40%) */
-  padding: 4px 6px;
+  /* 🔥 Hauteur réduite de 40% */
+  padding: 4px 6px !important;
 }
 
 .tab-btn:hover {
