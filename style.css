@@ -27,8 +27,6 @@ div.w-full.max-w-md {
   overflow: hidden;
   backdrop-filter: blur(1px);
   position: relative;
-
-  /* 📌 Correction : carnet remonté de 4 px supplémentaires */
   margin-top: -22px;
 }
 
@@ -77,28 +75,11 @@ header h1 {
   background: #d9d9d9;
 }
 
-/* ÉTAT ACTIF : même base + couleur de fond + bordures grises */
 .tab-btn.active {
   background: #c5c5c5;
   color: #111111;
-
-  /* mêmes bordures que la base, pas de brun */
   border: 2px solid #c4c4c4;
   border-bottom: none;
-
-  /* soulignement supérieur en gris (plus de liseré brun) */
-  border-top: 3px solid #c4c4c4;
-}
-
-.tab-btn:hover {
-  background: #d9d9d9;
-}
-
-.tab-btn.active {
-  background: #c5c5c5;
-  color: #111111;
-
-  /* 📌 Bord supérieur corrigé : gris neutre */
   border-top: 3px solid #aaaaaa;
 }
 
@@ -173,21 +154,18 @@ footer {
   z-index: 1000;
 }
 
-/* padding-bottom supprimé */
 body {
   padding-bottom: 0;
 }
 
-/* --- ANIMATIONS GLOBALES --- */
+/* --- ANIMATIONS --- */
 div, header, button, textarea {
   transition: all 0.3s ease;
 }
 
-/* Séparation légère des onglets */
 #tabs button {
   border-right: 1px solid #d0d0d0;
 }
-
 #tabs button:last-child {
   border-right: none;
 }
@@ -197,7 +175,6 @@ div, header, button, textarea {
   padding: 4px 8px;
   font-size: 26px;
 }
-
 #menuBtn:active {
   opacity: 0.6;
 }
@@ -208,7 +185,9 @@ div, header, button, textarea {
 #sidePanel {
   background: #ffffff;
   box-shadow: 4px 0 12px rgba(0,0,0,0.25);
-  z-index: 999;
+
+  /* ✔️ Correction : passe devant le footer */
+  z-index: 2001;
 }
 
 /* boutons */
