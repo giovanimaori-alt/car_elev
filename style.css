@@ -257,3 +257,7 @@ div, header, button, textarea {
   background: #efefef !important;
   z-index: 9999 !important;
 }
+
+body {
+  height: 100vh;
+}
