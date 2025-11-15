@@ -39,6 +39,14 @@ window.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  /* --- SOUS-MENUS --- */
+  document.querySelectorAll(".submenu-toggle").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const menu = btn.nextElementSibling;
+      menu.classList.toggle("hidden");
+    });
+  });
+
   /* =====================
      RESET CHAT
      ===================== */
