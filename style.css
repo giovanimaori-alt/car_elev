@@ -80,7 +80,9 @@ header h1 {
 .tab-btn.active {
   background: #c5c5c5;
   color: #111111;
-  border-top: 3px solid #7a7a7a;
+
+  /* 📌 Bord supérieur corrigé : gris neutre */
+  border-top: 3px solid #aaaaaa;
 }
 
 /* --- CHAT --- */
@@ -147,7 +149,7 @@ header h1 {
 /* --- PIED DE PAGE --- */
 footer {
   position: fixed;
-  bottom: -2px;  /* 📌 Aligné exactement sur le badge version */
+  bottom: -2px;
   left: 0;
   right: 0;
   text-align: center;
@@ -216,10 +218,8 @@ div, header, button, textarea {
   position: fixed;
   bottom: 6px;
   right: 8px;
-
   font-size: 10px;
   padding: 2px 6px;
-
   background: rgba(0, 0, 0, 0.35);
   color: #fff;
   border-radius: 4px;
