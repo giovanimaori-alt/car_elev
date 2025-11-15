@@ -147,7 +147,7 @@ header h1 {
 /* --- PIED DE PAGE --- */
 footer {
   position: fixed;
-  bottom: 1px;  /* 📌 Aligné exactement sur le badge version */
+  bottom: -2px;  /* 📌 Aligné exactement sur le badge version */
   left: 0;
   right: 0;
   text-align: center;
