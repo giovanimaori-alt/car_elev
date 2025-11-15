@@ -28,8 +28,8 @@ div.w-full.max-w-md {
   backdrop-filter: blur(1px);
   position: relative;
 
-  /* 📌 Correction : carnet légèrement remonté */
-  margin-top: -18px;
+  /* 📌 Correction : carnet remonté de 4 px supplémentaires */
+  margin-top: -22px;
 }
 
 /* --- effet reliure à gauche --- */
@@ -147,14 +147,14 @@ header h1 {
 /* --- PIED DE PAGE --- */
 footer {
   position: fixed;
-  bottom: 6px;        /* 📌 Aligné exactement sur le badge version */
+  bottom: 6px;  /* 📌 Aligné exactement sur le badge version */
   left: 0;
   right: 0;
   text-align: center;
   z-index: 1000;
 }
 
-/* 📌 padding-bottom supprimé */
+/* padding-bottom supprimé */
 body {
   padding-bottom: 0;
 }
@@ -222,7 +222,6 @@ div, header, button, textarea {
 
   background: rgba(0, 0, 0, 0.35);
   color: #fff;
-
   border-radius: 4px;
   z-index: 999999;
   pointer-events: none;
