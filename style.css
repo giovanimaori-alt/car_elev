@@ -3,7 +3,7 @@
    Palette cohérente avec le logo
    =============================== */
 
-/* --- Couleurs globales --- */
+/* --- Couleurs globales inspirées du logo --- */
 :root {
   --gris-fonce: #3a3a3c;
   --gris-acier: #7c8289;
@@ -13,7 +13,10 @@
   --ombre: rgba(0,0,0,0.18);
 }
 
-/* --- Reset propre --- */
+/* ===============================
+   RESET + BASE GLOBALE
+   =============================== */
+
 body {
   margin: 0;
   padding: 0;
@@ -83,7 +86,7 @@ nav a:hover {
   opacity: 0.75;
 }
 
-/* --- Sous-menus --- */
+/* --- Sous-menus Desktop --- */
 .submenu {
   display: none;
   position: absolute;
@@ -93,6 +96,7 @@ nav a:hover {
   top: 2.8rem;
   min-width: 210px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 20;
 }
 
 li:hover > .submenu {
@@ -193,7 +197,7 @@ li:hover > .submenu {
 }
 
 /* ===============================
-   FOOTER (optionnel)
+   FOOTER
    =============================== */
 
 footer {
