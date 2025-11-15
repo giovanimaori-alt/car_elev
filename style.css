@@ -198,9 +198,12 @@ footer {
 .panel-btn {
   width: 100%;
   text-align: left;
-  padding: 12px 16px;
-  border-radius: 8px;
 
+  /* ↓↓↓ seule modification demandée ↓↓↓ */
+  padding: 7px 16px;   /* réduction de ~40% */
+  /* ↑↑↑ rien d’autre n’a été touché ↑↑↑ */
+
+  border-radius: 8px;
   background: #efefef;
   font-size: 15px;
   font-family: 'Patrick Hand SC', sans-serif;
