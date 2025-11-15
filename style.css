@@ -149,7 +149,7 @@ header h1 {
 /* --- PIED DE PAGE --- */
 footer {
   position: fixed;
-  bottom: -2px;
+  bottom: 0px;
   left: 0;
   right: 0;
   text-align: center;
