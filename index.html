@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conservatoire du Canigou</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+    body {
+      background: #f5f3ee;
+      font-family: system-ui, sans-serif;
+      color: #2a2a2a;
+    }
+
+    /* Couleurs nature sobres */
+    :root {
+      --vert: #6a7f5f;
+      --vert-clair: #dfe7dd;
+      --brun: #8a6f4d;
+      --pierre: #e5e0d8;
+    }
+
+    /* Header */
+    header {
+      background: var(--vert);
+      color: white;
+      padding: 1rem 1.5rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    /* Logo */
+    #logo {
+      width: 52px;
+      height: 52px;
+      background: var(--vert-clair);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--vert);
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    /* Menu desktop */
+    nav ul {
+      gap: 1.5rem;
+    }
+
+    /* Liens */
+    nav a {
+      color: white;
+      font-weight: 500;
+      transition: 0.2s;
+    }
+    nav a:hover {
+      opacity: 0.75;
+    }
+
+    /* Sous-menus */
+    .submenu {
+      display: none;
+      position: absolute;
+      background: white;
+      color: #333;
+      padding: 0.5rem 0;
+      border-radius: 6px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      min-width: 200px;
+      z-index: 20;
+    }
+
+    li:hover > .submenu {
+      display: block;
+    }
+
+    .submenu a {
+      color: #333;
+      padding: 0.5rem 1rem;
+      display: block;
+    }
+    .submenu a:hover {
+      background: var(--pierre);
+    }
+
+    /* Section hero */
+    .hero {
+      text-align: center;
+      padding: 3.5rem 1rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .hero h1 {
+      font-size: 2.3rem;
+      font-weight: 600;
+      color: var(--vert);
+    }
+
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #444;
+    }
+
+    /* Boutons */
+    .btn {
+      margin-top: 1.8rem;
+      background: var(--vert);
+      color: white;
+      padding: 0.9rem 1.6rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 500;
+      transition: 0.2s;
+      display: inline-block;
+    }
+    .btn:hover {
+      background: var(--brun);
+    }
+
+    /* Mobile menu */
+    #menuMobileBtn {
+      display: none;
+      font-size: 1.8rem;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        display: none;
+      }
+      #menuMobileBtn {
+        display: block;
+      }
+      #mobileMenu {
+        display: none;
+        background: white;
+        padding: 1rem;
+      }
+      #mobileMenu a {
+        display: block;
+        padding: 0.6rem 0;
+        color: var(--vert);
+        font-weight: 500;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div id="logo">LOGO</div>
+
+    <!-- Bouton mobile -->
+    <div id="menuMobileBtn">☰</div>
+
+    <!-- Menu desktop -->
+    <nav>
+      <ul class="flex relative">
+        <li class="relative">
+          <a href="#">Accueil</a>
+        </li>
+
+        <li class="relative">
+          <a href="#">Association ▾</a>
+          <div class="submenu">
+            <a href="#">Terrains & Élevage</a>
+            <a href="#">École du Dehors</a>
+            <a href="#">Carnet d’Élevage</a>
+            <a href="#">Carnet d’Aventurier</a>
+          </div>
+        </li>
+
+        <li class="relative">
+          <a href="#">Nos outils ▾</a>
+          <div class="submenu">
+            <a href="#">Carnet d’Élevage</a>
+            <a href="#">Carnet d’Aventurier</a>
+          </div>
+        </li>
+
+        <li><a href="#">Contact</a></li>
+
+        <li class="relative">
+          <a href="#">Espace Membres ▾</a>
+          <div class="submenu">
+            <a href="inscription.html">Inscription</a>
+            <a href="#">Connexion</a>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Menu mobile -->
+  <div id="mobileMenu">
+    <a href="#">Accueil</a>
+
+    <details>
+      <summary>Association</summary>
+      <a href="#">Terrains & Élevage</a>
+      <a href="#">École du Dehors</a>
+      <a href="#">Carnet d’Élevage</a>
+      <a href="#">Carnet d’Aventurier</a>
+    </details>
+
+    <details>
+      <summary>Nos outils</summary>
+      <a href="#">Carnet d’Élevage</a>
+      <a href="#">Carnet d’Aventurier</a>
+    </details>
+
+    <a href="#">Contact</a>
+
+    <details>
+      <summary>Espace membres</summary>
+      <a href="inscription.html">Inscription</a>
+      <a href="#">Connexion</a>
+    </details>
+  </div>
+
+
+  <!-- SECTION HERO -->
+  <section class="hero">
+    <h1>Conservatoire du Canigou</h1>
+    <p>
+      Préservation, pédagogie, élevage, transmission.  
+      Un espace naturel vivant, partagé, ouvert à tous.
+    </p>
+
+    <a href="inscription.html" class="btn">Créer un compte</a>
+  </section>
+
+
+  <!-- SCRIPT MENU MOBILE -->
+  <script>
+    const btn = document.getElementById("menuMobileBtn");
+    const menu = document.getElementById("mobileMenu");
+
+    btn.addEventListener("click", () => {
+      menu.style.display = menu.style.display === "block" ? "none" : "block";
+    });
+  </script>
+
+</body>
+</html>
