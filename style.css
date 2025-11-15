@@ -169,7 +169,7 @@ footer {
   z-index: 2001;
   border-right: 1px solid #cccccc;
 
-  /* ✔️ AJOUTS SCROLL PANNEAU */
+  /* scroll interne du panneau */
   height: 100vh;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
@@ -224,4 +224,14 @@ footer {
   height: 100vh !important;
   background: #efefef !important;
   z-index: 9999 !important;
+}
+
+/* 🔝 SUPERPOSITION DU PRÉAMBULE AU-DESSUS DU PANNEAU */
+#preModalOverlay {
+  z-index: 3000 !important;
+}
+
+#preModal {
+  position: relative;
+  z-index: 3001;
 }
