@@ -24,10 +24,7 @@ div.w-full.max-w-md {
   background: rgba(252, 252, 252, 0.96);
   border: 3px solid #c3c3c3;
   border-radius: 18px;
-
-  /* Ombre modernisée */
   box-shadow: 0 8px 28px rgba(0,0,0,0.18), 0 2px 8px rgba(0,0,0,0.10);
-
   overflow: hidden;
   backdrop-filter: blur(1px);
   position: relative;
@@ -53,10 +50,7 @@ header {
   background: linear-gradient(135deg, #d9d9d9, #b8b8b8);
   color: #212121 !important;
   border-bottom: 2px solid #8a8a8a;
-
-  /* Ombre subtile */
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-
   text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
 }
 
@@ -76,9 +70,10 @@ header h1 {
   font-family: 'Patrick Hand SC', sans-serif;
   text-shadow: 0 1px 0 rgba(255,255,255,0.4);
   color: #333333;
-
-  /* Modernisation */
   transition: 0.25s ease;
+
+  /* 🔥 MODIFICATION DEMANDÉE : hauteur réduite (40%) */
+  padding: 4px 6px;
 }
 
 .tab-btn:hover {
@@ -92,8 +87,6 @@ header h1 {
   border: 2px solid #c4c4c4;
   border-bottom: none;
   border-top: 3px solid #aaaaaa;
-
-  /* effet actif subtil */
   box-shadow: inset 0 -2px 6px rgba(0,0,0,0.12);
 }
 
@@ -110,29 +103,21 @@ header h1 {
     );
 }
 
-/* bulles IA */
 #chat .bg-gray-200 {
   background: #f3f3f3 !important;
   border: 1px solid #d4d4d4;
   border-radius: 12px;
-
-  /* ombre modernisée */
   box-shadow: 0 1px 3px rgba(0,0,0,0.12);
-
   font-family: 'Trebuchet MS', sans-serif;
   font-size: 1rem;
   line-height: 1.4;
   color: #242424;
 }
 
-/* bulles utilisateur */
 #chat .bg-blue-600 {
   background: #636363 !important;
   border: 1px solid #3f3f3f;
-
-  /* ombre modernisée */
   box-shadow: 0 2px 4px rgba(0,0,0,0.28);
-
   font-family: 'Trebuchet MS', sans-serif;
 }
 
@@ -157,10 +142,7 @@ header h1 {
   border: 2px solid #7a7a7a;
   border-radius: 12px;
   font-weight: bold;
-
-  /* ombre modernisée */
   box-shadow: 0 3px 6px rgba(0,0,0,0.20);
-
   transition: 0.25s ease;
 }
 
@@ -177,8 +159,6 @@ footer {
   right: 0;
   text-align: center;
   z-index: 1000;
-
-  /* ombre légère pour séparer visuellement */
   text-shadow: 0 1px 2px rgba(255,255,255,0.5);
 }
 
@@ -186,31 +166,21 @@ footer {
 #sidePanel {
   background: #f9f9f9;
   box-shadow: 4px 0 14px rgba(0,0,0,0.25);
-
-  /* passe par-dessus le footer */
   z-index: 2001;
-
-  /* effet de profondeur */
   border-right: 1px solid #cccccc;
 }
 
-/* --- BOUTONS du panneau (modernisés) --- */
+/* --- BOUTONS PANEL --- */
 .panel-btn {
   width: 100%;
   text-align: left;
-
-  /* ↓↓↓ seule modification demandée ↓↓↓ */
-  padding: 7px 16px;   /* réduction de ~40% */
-  /* ↑↑↑ rien d’autre n’a été touché ↑↑↑ */
-
+  padding: 12px 16px;
   border-radius: 8px;
   background: #efefef;
   font-size: 15px;
   font-family: 'Patrick Hand SC', sans-serif;
   border: 1px solid #d1d1d1;
   color: #2c2c2c;
-
-  /* Modernisation */
   box-shadow: 0 1px 3px rgba(0,0,0,0.12);
   transition: 0.20s ease;
 }
