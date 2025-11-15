@@ -37,14 +37,17 @@
     #logo {
       width: 52px;
       height: 52px;
-      background: var(--vert-clair);
       border-radius: 8px;
+      overflow: hidden;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: var(--vert);
-      font-weight: bold;
-      font-size: 0.9rem;
+    }
+
+    #logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
 
     /* Menu desktop */
@@ -156,7 +159,9 @@
 
   <!-- HEADER -->
   <header>
-    <div id="logo">LOGO</div>
+    <div id="logo">
+      <img src="images/logo.png" alt="Logo Conservatoire du Canigou" />
+    </div>
 
     <!-- Bouton mobile -->
     <div id="menuMobileBtn">☰</div>
@@ -226,7 +231,6 @@
     </details>
   </div>
 
-
   <!-- SECTION HERO -->
   <section class="hero">
     <h1>Conservatoire du Canigou</h1>
@@ -237,7 +241,6 @@
 
     <a href="inscription.html" class="btn">Créer un compte</a>
   </section>
-
 
   <!-- SCRIPT MENU MOBILE -->
   <script>
