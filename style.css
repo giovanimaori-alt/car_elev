@@ -1,158 +1,245 @@
-/* ============================================================
-   🎨 PACK DESIGN – ELEVAGE (gris/brun, relief, pro, rustique)
-   Ajout 100 % CSS – Sans toucher au style existant
-   ============================================================ */
+/* 🌍 CAHIER D'ELEVAGE – Version reliure + lisibilité */
 
-/* ---- Palette ---- */
-:root {
-  --col-fond: #f4f3ef;
-  --col-brun: #5b4a3a;
-  --col-brun-clair: #8a7663;
-  --col-gris: #d6d0c9;
-  --col-gris-fonce: #b8b2aa;
-  --col-ligne: rgba(80,60,40,0.18);
+/* Imports AVANT tout le reste */
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand+SC&display=swap');
+
+/* --- FOND GLOBAL --- */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f2f2f2;
+  background-image:
+    radial-gradient(rgba(0,0,0,0.02) 1px, transparent 1px),
+    url('https://upload.wikimedia.org/wikipedia/commons/9/9d/Paper_texture_background.jpg');
+  background-size: 18px 18px, cover;
+  background-attachment: fixed;
+  font-family: 'Trebuchet MS', sans-serif;
+  color: #222222;
 }
 
-/* ---- Nouvelle couverture du carnet ---- */
+/* --- CARNET PRINCIPAL --- */
 div.w-full.max-w-md {
-  background: var(--col-fond);
-  border: 3px solid var(--col-gris-fonce);
-  border-radius: 20px;
-  box-shadow:
-      0px 3px 10px rgba(0,0,0,0.15),
-      inset 0 0 18px rgba(180,170,150,0.25);
-
+  background: rgba(252, 252, 252, 0.96);
+  border: 3px solid #c3c3c3;
+  border-radius: 18px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.18);
+  overflow: hidden;
+  backdrop-filter: blur(1px);
   position: relative;
 }
 
-/* ---- Reliure cuir gris-brun ---- */
+/* --- effet reliure à gauche --- */
 div.w-full.max-w-md::before {
   content: "";
   position: absolute;
-  left: -14px;
+  left: -12px;
   top: 0;
-  width: 14px;
+  width: 12px;
   height: 100%;
-
-  background: linear-gradient(90deg,
-      rgba(60,45,35,0.55),
-      rgba(90,70,50,0.25),
-      rgba(255,255,255,0));
-
-  border-top-left-radius: 20px;
-  border-bottom-left-radius: 20px;
-
-  box-shadow:
-      inset -2px 0 4px rgba(0,0,0,0.25),
-      -2px 0 4px rgba(0,0,0,0.15);
+  background: linear-gradient(90deg, rgba(80,80,80,0.4), rgba(255,255,255,0));
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  box-shadow: inset -2px 0 4px rgba(0,0,0,0.2);
 }
 
-/* ---- Header façon cuir patiné ---- */
+/* --- EN-TÊTE --- */
 header {
-  background: linear-gradient(135deg, #b5a594, #958575);
-  border-bottom: 2px solid #6b5b4c;
-  color: #33261b !important;
+  background: linear-gradient(135deg, #d6d6d6, #b0b0b0);
+  color: #212121 !important;
+  border-bottom: 2px solid #8a8a8a;
+  text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 header h1 {
   font-family: 'Patrick Hand SC', sans-serif;
-  font-size: 1.8rem;
-  letter-spacing: 1px;
+  font-size: 1.7rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 }
 
-/* ---- Boutons onglets style carnet d'éleveur ---- */
+/* --- ONGLET BARRE --- */
 .tab-btn {
-  background: #e8e2db;
-  border: 2px solid #c4b8aa;
+  background: #e6e6e6;
+  border: 2px solid #c4c4c4;
   border-bottom: none;
-  color: #3d2d22;
-  font-family: "Shadows Into Light", cursive;
   font-weight: 600;
-
-  border-top-left-radius: 8px;
-  border-top-right-radius: 8px;
-
-  transition: 0.25s ease;
+  font-family: 'Patrick Hand SC', sans-serif;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.4);
+  color: #333333;
+  transition: 0.25s;
 }
 
 .tab-btn:hover {
-  background: #dad2c9;
+  background: #d9d9d9;
 }
 
 .tab-btn.active {
-  background: #c9bcae;
-  border-top: 3px solid #5b4a3a;
-  color: #2e2217;
+  background: #c5c5c5;
+  color: #111111;
+  border-top: 3px solid #7a7a7a;
 }
 
-/* ---- Boutons du panneau latéral ---- */
-.panel-btn {
-  background: #ebe7e2;
-  border: 1px solid #c9c2ba;
-  border-radius: 6px;
-  transition: 0.25s;
-  color: #3a2f27;
-}
-
-.panel-btn:hover {
-  background: #ded7cf;
-  border-color: #b7ada5;
-}
-
-/* ---- Chat : lignes + fond rustique clair ---- */
+/* --- CHAT --- */
 #chat {
-  background: #faf8f4;
+  background: rgba(250, 250, 250, 0.95);
+  padding: 1rem;
   background-image:
     repeating-linear-gradient(
       0deg,
       transparent,
-      transparent 26px,
-      var(--col-ligne) 27px);
+      transparent 27px,
+      rgba(130,130,130,0.15) 28px
+    );
 }
 
-/* ---- Bulles IA gris-élevage ---- */
+/* bulles IA */
 #chat .bg-gray-200 {
-  background: #f2eee9 !important;
-  border: 1px solid #d8d1c8;
-  box-shadow: inset 0 1px 2px rgba(0,0,0,0.08);
-  color: #2e2319;
+  background: #f3f3f3 !important;
+  border: 1px solid #d4d4d4;
+  border-radius: 12px;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.06);
+  font-family: 'Trebuchet MS', sans-serif;
+  font-size: 1rem;
+  line-height: 1.4;
+  color: #242424;
 }
 
-/* ---- Bulles utilisateur brun foncé ---- */
+/* bulles utilisateur */
 #chat .bg-blue-600 {
-  background: #6b4d33 !important;
-  border: 1px solid #4c3624;
+  background: #5f5f5f !important;
+  border: 1px solid #3f3f3f;
   box-shadow: 0 1px 2px rgba(0,0,0,0.25);
+  font-family: 'Trebuchet MS', sans-serif;
 }
 
-/* ---- Champ de saisie style carnet ---- */
+/* --- ZONE DE SAISIE --- */
 #input {
-  background: #fdfcf9;
-  border: 2px solid #c4b8aa;
-  color: #2b1e14;
-  border-radius: 10px;
+  background: #fdfdfd;
+  border: 2px solid #c4c4c4;
+  border-radius: 12px;
+  color: #222222;
+  font-family: 'Courier New', monospace;
 }
 
-/* ---- Bouton envoyer style cuir brun ---- */
+#input::placeholder {
+  color: #a0a0a0;
+}
+
+/* --- BOUTON ENVOI --- */
 #send {
-  background: linear-gradient(135deg, #8d7a65, #6e5b4b) !important;
-  border: 2px solid #4f3e31;
-  color: #fff !important;
+  background: linear-gradient(135deg, #c4c4c4, #a7a7a7) !important;
+  color: #1f1f1f !important;
+  border: 2px solid #7a7a7a;
+  border-radius: 12px;
+  font-weight: bold;
   box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: 0.2s;
 }
 
 #send:hover {
-  background: #7c6856 !important;
+  background: #b5b5b5 !important;
 }
 
-/* ---- Footer gris + espace correct ---- */
+/* --- PIED DE PAGE --- */
 footer {
-  bottom: 8px;
-  font-size: 11px;
-  color: #756b61;
+  position: fixed;
+  bottom: 4px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  z-index: 1000;        /* AU-DESSUS du carnet */
 }
 
-/* ---- Ajustement du carnet (levé) ---- */
-.app-root {
-  margin-top: 40px; /* remonter le carnet comme demandé */
+body {
+  padding-bottom: 30px; /* espace pour laisser respirer le footer */
+}
+
+/* --- ANIMATIONS GLOBALES --- */
+div, header, button, textarea {
+  transition: all 0.3s ease;
+}
+
+/* Séparation légère des onglets */
+#tabs button {
+  border-right: 1px solid #d0d0d0;
+}
+
+#tabs button:last-child {
+  border-right: none;
+}
+
+/* Menu bouton */
+#menuBtn {
+  padding: 4px 8px;
+  font-size: 26px;
+}
+
+#menuBtn:active {
+  opacity: 0.6;
+}
+
+/* =======================
+   🌿 PANNEAU LATÉRAL
+   ======================= */
+
+/* On laisse Tailwind gérer la translation.
+   Ici, uniquement le style visuel. */
+#sidePanel {
+  background: #ffffff;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.25);
+  z-index: 999;
+}
+
+/* Boutons du panneau */
+.panel-btn {
+  width: 100%;
+  text-align: left;
+  padding: 10px 14px;
+  border-radius: 6px;
+  background: #f1f1f1;
+  font-size: 15px;
+  font-family: 'Patrick Hand SC', sans-serif;
+  border: 1px solid #d1d1d1;
+  color: #323232;
+  transition: 0.2s;
+}
+
+.panel-btn:hover {
+  background: #e3e3e3;
+  border-color: #bfbfbf;
+}
+
+/* ===== BADGE VERSION ===== */
+#versionBadge {
+  position: fixed;
+  bottom: 6px;
+  right: 8px;
+
+  font-size: 10px;
+  padding: 2px 6px;
+
+  background: rgba(0, 0, 0, 0.35);
+  color: #fff;
+
+  border-radius: 4px;
+  z-index: 999999;
+  pointer-events: none;
+}
+
+#sidePanel.open {
+  transform: translateX(0) !important;
+}
+
+/* ==========================================
+   FULLSCREEN
+   ========================================== */
+
+.fullscreen-active {
+  position: fixed !important;
+  inset: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  background: #efefef !important;
+  z-index: 9999 !important;
 }
