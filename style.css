@@ -27,6 +27,9 @@ div.w-full.max-w-md {
   overflow: hidden;
   backdrop-filter: blur(1px);
   position: relative;
+
+  /* 📌 Correction : carnet légèrement remonté */
+  margin-top: -18px;
 }
 
 /* --- effet reliure à gauche --- */
@@ -144,15 +147,16 @@ header h1 {
 /* --- PIED DE PAGE --- */
 footer {
   position: fixed;
-  bottom: 4px;
+  bottom: 6px;        /* 📌 Aligné exactement sur le badge version */
   left: 0;
   right: 0;
   text-align: center;
-  z-index: 1000;        /* AU-DESSUS du carnet */
+  z-index: 1000;
 }
 
+/* 📌 padding-bottom supprimé */
 body {
-  padding-bottom: 30px; /* espace pour laisser respirer le footer */
+  padding-bottom: 0;
 }
 
 /* --- ANIMATIONS GLOBALES --- */
@@ -182,16 +186,13 @@ div, header, button, textarea {
 /* =======================
    🌿 PANNEAU LATÉRAL
    ======================= */
-
-/* On laisse Tailwind gérer la translation.
-   Ici, uniquement le style visuel. */
 #sidePanel {
   background: #ffffff;
   box-shadow: 4px 0 12px rgba(0,0,0,0.25);
   z-index: 999;
 }
 
-/* Boutons du panneau */
+/* boutons */
 .panel-btn {
   width: 100%;
   text-align: left;
@@ -210,7 +211,7 @@ div, header, button, textarea {
   border-color: #bfbfbf;
 }
 
-/* ===== BADGE VERSION ===== */
+/* BADGE VERSION */
 #versionBadge {
   position: fixed;
   bottom: 6px;
@@ -231,10 +232,7 @@ div, header, button, textarea {
   transform: translateX(0) !important;
 }
 
-/* ==========================================
-   FULLSCREEN
-   ========================================== */
-
+/* FULLSCREEN */
 .fullscreen-active {
   position: fixed !important;
   inset: 0 !important;
