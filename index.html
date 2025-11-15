@@ -8,151 +8,8 @@
   <!-- Tailwind CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <style>
-    body {
-      background: #f5f3ee;
-      font-family: system-ui, sans-serif;
-      color: #2a2a2a;
-    }
-
-    /* Couleurs nature sobres */
-    :root {
-      --vert: #6a7f5f;
-      --vert-clair: #dfe7dd;
-      --brun: #8a6f4d;
-      --pierre: #e5e0d8;
-    }
-
-    /* Header */
-    header {
-      background: var(--vert);
-      color: white;
-      padding: 1rem 1.5rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    /* Logo */
-    #logo {
-      width: 52px;
-      height: 52px;
-      border-radius: 8px;
-      overflow: hidden;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    #logo img {
-      width: 100%;
-      height: 100%;
-      object-fit: contain;
-    }
-
-    /* Menu desktop */
-    nav ul {
-      gap: 1.5rem;
-    }
-
-    /* Liens */
-    nav a {
-      color: white;
-      font-weight: 500;
-      transition: 0.2s;
-    }
-    nav a:hover {
-      opacity: 0.75;
-    }
-
-    /* Sous-menus */
-    .submenu {
-      display: none;
-      position: absolute;
-      background: white;
-      color: #333;
-      padding: 0.5rem 0;
-      border-radius: 6px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      min-width: 200px;
-      z-index: 20;
-    }
-
-    li:hover > .submenu {
-      display: block;
-    }
-
-    .submenu a {
-      color: #333;
-      padding: 0.5rem 1rem;
-      display: block;
-    }
-    .submenu a:hover {
-      background: var(--pierre);
-    }
-
-    /* Section hero */
-    .hero {
-      text-align: center;
-      padding: 3.5rem 1rem;
-      max-width: 800px;
-      margin: auto;
-    }
-
-    .hero h1 {
-      font-size: 2.3rem;
-      font-weight: 600;
-      color: var(--vert);
-    }
-
-    .hero p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: #444;
-    }
-
-    /* Boutons */
-    .btn {
-      margin-top: 1.8rem;
-      background: var(--vert);
-      color: white;
-      padding: 0.9rem 1.6rem;
-      border-radius: 8px;
-      font-size: 1rem;
-      font-weight: 500;
-      transition: 0.2s;
-      display: inline-block;
-    }
-    .btn:hover {
-      background: var(--brun);
-    }
-
-    /* Mobile menu */
-    #menuMobileBtn {
-      display: none;
-      font-size: 1.8rem;
-    }
-
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-      }
-      #menuMobileBtn {
-        display: block;
-      }
-      #mobileMenu {
-        display: none;
-        background: white;
-        padding: 1rem;
-      }
-      #mobileMenu a {
-        display: block;
-        padding: 0.6rem 0;
-        color: var(--vert);
-        font-weight: 500;
-      }
-    }
-  </style>
+  <!-- CSS externe -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
@@ -163,10 +20,8 @@
       <img src="images/logo.png" alt="Logo Conservatoire du Canigou" />
     </div>
 
-    <!-- Bouton mobile -->
     <div id="menuMobileBtn">☰</div>
 
-    <!-- Menu desktop -->
     <nav>
       <ul class="flex relative">
         <li class="relative">
@@ -204,7 +59,7 @@
     </nav>
   </header>
 
-  <!-- Menu mobile -->
+  <!-- MENU MOBILE -->
   <div id="mobileMenu">
     <a href="#">Accueil</a>
 
@@ -231,7 +86,7 @@
     </details>
   </div>
 
-  <!-- SECTION HERO -->
+  <!-- HERO -->
   <section class="hero">
     <h1>Conservatoire du Canigou</h1>
     <p>
@@ -242,7 +97,7 @@
     <a href="inscription.html" class="btn">Créer un compte</a>
   </section>
 
-  <!-- SCRIPT MENU MOBILE -->
+  <!-- SCRIPT -->
   <script>
     const btn = document.getElementById("menuMobileBtn");
     const menu = document.getElementById("mobileMenu");
